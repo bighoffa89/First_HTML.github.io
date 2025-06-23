@@ -146,7 +146,7 @@ fönstret
 ###########################################################################*/
 
 body {
-  background-image: url(images/back-g-universe.jpg~);
+  background-image: url(images/back-g-universe.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -221,7 +221,7 @@ Huvudrubriken är centrerad och det är utrymme under bilden.
 ###########################################################################*/
 
 .hero_img {
-  background-image: url(images/SE-hero-img-planet.jpg~);
+  background-image: url(images/SE-hero-img-planet.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -262,7 +262,7 @@ aside {
   height: auto;
   width: auto;
   max-width: 37rem;
-  background-image: url(images/space-engineers-back.jpg~);
+  background-image: url(images/space-engineers-back.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
