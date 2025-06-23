@@ -1,0 +1,553 @@
+/*############################# css reset ###################################
+
+jag har valt att använda mig av Normalize som grund och sen därefter ändrat
+taggar efter vad jag kände skulle passa mig.
+ 
+###########################################################################*/
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+
+/*############################### Fonts #####################################
+
+det fonts jag valt att använda mig av är.
+
+- open sans (regular) 
+- aguanate (bold) den är lite otydlig när texten blir liten 
+- newtserif (italic)
+
+###########################################################################*/
+
+@font-face {
+  font-family: "open sans";
+  src: url(fonts/opensans-regular-webfont.woff) format(woff);
+  src: url(fonts/opensans-regular-webfont.woff2) format(woff2);
+}
+@font-face {
+  font-family: "aguante";
+  src: url(fonts/aguante-regular-webfont.woff) format(woff);
+  src: url(fonts/aguante-regular-webfont.woff2) format(woff2);
+}
+@font-face {
+  font-family: "newtserif";
+  src: url(fonts/newtserif-italic-webfont.woff) format(woff);
+  src: url(fonts/newtserif-italic-webfont.woff2) format(woff2);
+}
+
+/*############################# border box ###################################
+
+jag använder mig av borderbox då höjden och bredden är lika stor som boxen och
+går inte utanför (sida 227)
+
+############################################################################*/
+
+* {
+  box-sizing: border-box;
+}
+
+/*############################### wrapper ####################################
+
+wrappern fungerar lite som ett skelett då den bestämmer hur stora sina
+kroppsdelar ska vara och var de ska vara.  
+
+den är uppbyggd som en grid i rader lodrätt ner med bestämda platser för
+varandra kroppsdels tag och att sidan är centrerad i mitten av webbläsaren.
+
+font family är open sans som är sidans huvudsakliga textform.
+
+den har även en bakgrundsfärg som en ram runt allt.
+
+############################################################################*/
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "open sans";
+  display: grid;
+  grid-template-rows: 4rem 20rem auto auto auto;
+  grid-template-areas:
+    "m_head"
+    "he_img"
+    "m_asid"
+    "m_main"
+    "m_foot";
+  background-color: rgba(85, 85, 85, 0.616);
+}
+.main_header {
+  grid-area: m_head;
+}
+.hero_img {
+  grid-area: he_img;
+}
+.main_aside {
+  grid-area: m_asid;
+}
+.main_main {
+  grid-area: m_main;
+}
+.main_footer {
+  grid-area: m_foot;
+}
+/*
+@media (max-width: 1320px) {
+  .wrapper {
+    width: 100%;
+  }
+}*/
+
+/*######################  för inställningar  ###############################
+
+här bestämmer vi att alla titlar (h1-h3) taggar ska använda font agunat och
+alla klasser (.citat) kommer använda font New Serif italic medans alla text
+taggar (p) har ett max antal tecken.
+
+sidans sections har luft utrymme inne i samt har utrymme över och
+under sig. Medans Main har utrymme under sig
+
+Länk text har en satt färg.
+
+class: .citat = italic för citat
+
+###########################################################################*/
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-family: "aguante";
+}
+p {
+  max-width: 75ch;
+}
+
+.citat {
+  font-family: "newtserif";
+  display: inline;
+}
+
+section {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+main {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: orange;
+}
+html {
+  line-height: 1.5;
+}
+/*############################### body img back #############################
+
+bakgrundsbilden för hela sidan och är inställt på att täcka hela webbläsaren
+fönstret
+
+###########################################################################*/
+
+body {
+  background-image: url(images/back-g-universe.jpg~);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*############################### header ####################################
+
+headers uppbyggnaden är flex och att det är utrymme mellan dess innehåll
+samt att den är centrerad.
+
+Logganns storlek och form
+
+Navigationen:
+(ul) är med flex och tar bort style och ger sitt innehåll utrymme runt och
+mellan sitt innehåll, medans knapparna (li) har inställningar hur stora
+knapparna är och färger samt form.
+
+färger visas när länken (a) är aktiv eller om man besökt sidan.
+
+###########################################################################*/
+
+header {
+  background-color: rgba(87, 107, 173, 0.589);
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loggotyp {
+  height: 3.8rem;
+  width: 3.8rem;
+  border-radius: 50%;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  column-gap: 1rem;
+
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+header nav li {
+  background-color: black;
+  line-height: 2rem;
+  padding: 0 0.45rem;
+  border-radius: 1.5rem;
+  border: white;
+  border-style: solid;
+}
+
+header nav li:hover {
+  background-color: #8f8f3e;
+}
+header a {
+  font-weight: bold;
+}
+
+a:visited {
+  color: blueviolet;
+}
+a:active {
+  color: red;
+}
+
+/*############################### hero img ##################################
+
+bakgrundsbilden är inställd på att täcka hela sitt område och är centrerad.
+
+Huvudrubriken är centrerad och det är utrymme under bilden.
+
+###########################################################################*/
+
+.hero_img {
+  background-image: url(images/SE-hero-img-planet.jpg~);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  margin-bottom: 1rem;
+}
+.hero_img h1 {
+  background-color: black;
+}
+
+/*############################### aside #####################################
+
+aside är display flex och har space-between samt ett gap mellan sitt innehåll.
+
+varje sektion har en bakgrundsbild och ska täcka hela sitt innehåll samt är
+centrerad.
+
+sektionen har en max bredd.
+
+logga bildens storlek, färger på text och titlar och bakgrunds färg och form.
+
+knapparna är identiska med dom i header men har ett utrymme runt sig med.
+
+###########################################################################*/
+aside {
+  display: flex;
+
+  justify-content: space-between;
+  gap: 0rem 1rem;
+}
+.aside_section_spaceengerners {
+  background-color: rgb(194, 108, 33);
+  border-radius: 1rem;
+  height: auto;
+  width: auto;
+  max-width: 37rem;
+  background-image: url(images/space-engineers-back.jpg~);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+aside h2 {
+  color: #ffff00;
+}
+aside p {
+  background-color: #ffff00;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+aside img {
+  height: 8rem;
+  width: 8rem;
+}
+aside a {
+  background-color: orange;
+  border-radius: 1rem;
+  margin: 1rem;
+  color: black;
+  font-weight: bold;
+  line-height: 2rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 1.5rem;
+}
+aside a:hover {
+  background-color: #bebe54;
+}
+
+/*############################### main main #####################################
+
+main har i grund display: block; från Normalise.css .
+
+main article har flex warp och att det ska va utrymme och ett gap mella sitt inne
+håll, vilket gör att de anpassar sig efter webbsidans fönster.
+
+sektionens produkt har ett max bredd och ändrar färg när man hover över produkten.
+Titel är centrerad och bilden har ett satt värde och form.
+
+information sektionen färg men har ingen satt storlek.
+
+Prenumerera fältet får lite andrum från knappen när den hamnar under fältet.
+
+###########################################################################*/
+
+.main_main article {
+  text-align: center;
+  margin: 1rem 0;
+}
+.main_main article h2 {
+  background-color: rgb(87, 107, 173);
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.produkt_contaner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0rem 1rem;
+}
+
+.main_produkt {
+  border-radius: 1rem;
+  height: auto;
+  width: 15rem;
+  background-color: rgb(198, 199, 204);
+  border: black;
+  border-style: dotted;
+}
+
+.main_produkt:hover {
+  background-color: antiquewhite;
+}
+
+.main_produkt h3 {
+  text-align: center;
+}
+
+.main_produkt img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+}
+.main_information_section {
+  height: auto;
+  width: auto;
+  background-color: yellow;
+}
+.Prenumerera_fält {
+  margin-bottom: 0.5rem;
+}
+
+/*############################### main analys ###############################
+
+artikel bakgrund är vit och har mellanrum mellan sig själv och sitt innehåll.
+
+texten är tänkt att inte har någon maxlängd och huvudtiteln h1 har utrymme
+om sig.
+
+###########################################################################*/
+
+.analys_artical {
+  background-color: white;
+  padding: 3rem;
+  margin: 1rem 0;
+}
+
+p {
+  max-width: 125ch;
+}
+h1 {
+  margin: 1rem;
+}
+
+.referens_lista li {
+  margin-bottom: 2rem;
+
+  list-style-type: disc;
+}
+.referens_lista {
+  padding: 0;
+}
+
+/*############################### fotter ####################################
+
+Footer är en grid och har columns som bestämmer var sitt innehåll ska vara.
+bakgrundsfärg och textfärg
+
+Bilderna har en fast storlek och har utrymme på vänster sida om dig.
+
+###########################################################################*/
+
+footer {
+  background-color: black;
+  color: yellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "foot_bj foot_na foot_kt foot_sc";
+  justify-content: space-between;
+}
+.foot_bajs {
+  grid-area: foot_bj;
+}
+.foot_nav {
+  grid-area: foot_na;
+}
+.foot_kontakter {
+  grid-area: foot_kt;
+}
+.foot_social {
+  grid-area: foot_sc;
+}
+
+footer ul {
+  padding-left: 1rem;
+}
+
+.foot_social_nav a img {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+/*############################### media ####################################
+
+första förändringen är att footern ändras till 3 columns och 2 rader
+
+tredje så ändras aside till warp och footern till tabel-colums
+
+fjärde ändras så header har ingen max höjd och header navigationen blir en
+grid som gör att den blir stående och får mellanrum under knapparna.
+logga bilden blir större.
+samt att main produkten inte lägre har ett fast värde men har ett max
+värde i bräden samt att allt i och dom är centrerade
+
+###########################################################################*/
+
+/* 1 */
+
+@media (max-width: 900px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "foot_bj foot_bj foot_bj"
+      "foot_kt foot_na foot_sc";
+  }
+  .foot_bajs p {
+    max-width: 55ch;
+  }
+}
+
+/* 2 */
+
+@media (max-width: 700px) {
+  .main_aside {
+    flex-wrap: wrap;
+  }
+  .main_aside section {
+    max-width: 100%;
+  }
+  footer {
+    display: table-column;
+  }
+  .analys_artical {
+    padding: 0;
+  }
+}
+/* 3 */
+
+@media (max-width: 575px) {
+  .wrapper {
+    grid-template-rows: auto 20rem auto auto auto;
+
+    padding: 0;
+  }
+  header {
+    height: auto;
+  }
+  .loggotyp {
+    height: 4.3rem;
+    width: 4.3rem;
+  }
+
+  header ul {
+    display: grid;
+  }
+  header nav li {
+    margin-bottom: 0.3rem;
+  }
+
+  /*========[---kommere ner till omkring 250px på start sidan och 375px på analys sidan sen blir det en skroll värtikalt]==========*/
+
+  .main_produkt {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*############################### print #####################################
+
+vid utskrift så försvinner header navigationen erna och aside reklamen och
+all text blir serif och svart färg. medans titlar blir open sans
+
+och produkt bilderna blir mindre
+
+###########################################################################*/
+
+@media print {
+  header,
+  nav,
+  footer,
+  aside {
+    display: none;
+  }
+  * {
+    font-family: serif;
+  }
+  p {
+    font-size: 11pt;
+    color: black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: black;
+    font-family: "open sans";
+  }
+  .foot_kontakter {
+    color: black;
+  }
+  .main_produkt {
+    border-style: none;
+  }
+
+  .main_produkt img {
+    height: 9rem;
+    width: 13rem;
+  }
+  html {
+    line-height: 1.15;
+  }
+}
+/*###########################################################################*/

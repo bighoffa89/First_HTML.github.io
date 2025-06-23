@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+  <!-- valt svenska så högläsnings fungtioner vet vilket språk som ska läsas-->
+
+  <!--############################### Head #################################
+
+  samma kommentar i Index filen.
+
+ ##########################################################################-->
+
+  <head>
+    <title>bighoffas Creations</title>
+    <meta name="author" content="Mikael Hoffsten" />
+    <meta name="description" content="”exinamation html och css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--wrappern om sluter allt i body som en container. -->
+
+      <!--############################### Header #################################
+
+      samma kommentar i Index filen.
+
+      ##########################################################################-->
+
+      <header class="main_header">
+        <img
+          class="loggotyp"
+          src="images/site-logga-Head.png"
+          alt="en 3d anemerad kvinna med poligon "
+        />
+
+        <nav>
+          <ul>
+            <li><a href="index.html">start sida</a></li>
+            <li><a href="analys.html">Analys sida</a></li>
+            <li><a href="#footer">kontakter</a></li>
+            <li><a href="index.html#information">information</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!--########################### Hero img #####################################
+      
+      samma kommentar i Index filen. # men! har ändrat h1 till analys!
+
+      ###########################################################################-->
+
+      <div class="hero_img"><h1>SE: BIG HOFFAs Analys</h1></div>
+
+      <!--###########################  MAiN Analys #################################
+
+      Här har jag använt mig av en artikel med en huvud rubrik och felera sektionere 
+      i med rubriker och texter. och referenserna är listade i en lista.  
+
+      ###########################################################################-->
+
+      <main>
+        <article class="analys_artical">
+          <h2>analys</h2>
+          <section>
+            <h2>Inledning</h2>
+            <p>
+              Examinationsuppgiftens uppgift var att göra en produktsida på en
+              webbshop och en analys sida där jag analyserar min webbshop samt
+              att menyerna ska innehålla länkar som är kopplade mellan
+              sidorna.<br />
+              SE: BIGHOFFAS creations heter själva produktsidan, där säljs
+              blueprints på skapelser som Bighoffa har gjort till spelet SPACE
+              ENGINEERS. På sidan finns även reklam för själva spelet Space
+              Engineers och en länk att köpa spelet på deras webbplats. Det
+              finns även information om hur det fungerar och ett
+              prenumerationsfält för att få en notis när nya produkter kommer.
+              Sidan innehåller policy och kontaktinformation vid frågor. Genom
+              navigationen tar man sig till olika platser på sidan eller till
+              analys sidan. Tanken är att när man klickar på produkterna så ska
+              man komma till produktens egna sida, där man kan köpa den.
+            </p>
+          </section>
+          <section>
+            <h2>Programmerings val</h2>
+            <h3>Html5</h3>
+            <p>
+              Jag har valt att lägga min wrapper och produkt_contaner i en div
+              tagg vilken fungerar som en container och håller alla barn och
+              barnbarn innanför. Enligt boken har det ingen semantisk betydelse
+              därför valde jag en div tagg medans hero_img är en dekorativ tagg
+              och därför är en div rätt tag enligt (Montathar faraon & Lars
+              Holmberg, 2022) <br />
+              Enligt Debolt är element som saknar semantiska betydelse samt
+              saknar någon typ av klar utseende div. wrapper div eller container
+              har ingen semantisk mening och det är en generisk behållare vilket
+              gör div rätt för uppgiften (DeBolt, VD, (2014)). <br />
+              Jag valde att ha en ul>li>a lista i min nav tag som navigation
+              dels för estetiska programmerings utseendet i koden. Enligt
+              (Coyier, 2013) är det ingen större betydelse i html5 vilket man
+              använder sig av, nav a /nav eller nav ul li a /li /ul /nav men det
+              förekommer fler listor ute på webben en nav>a för tillfället.
+            </p>
+            <h3>Css reset</h3>
+            <p>
+              Jag använde mig av Normalize.css enligt (Shechter, 2019) gör det
+              att elementen följer en generell standard på webben såsom
+              teckenstorlek och radavstånd. Han tycker även att man ska göra en
+              egen liten css-reset <br />
+              Jag gjorde en liten förinställning för att minska kodning på min
+              css såsom inte ha någon margin-top på mina h1-h3 och sections:
+              padding: 1rem; margin: 1rem 0; som exempel.
+            </p>
+            <h3>Box modelen</h3>
+            <p>
+              Jag använder box-sizing: border-box då padding och border kommer
+              innanför angiven höjd samt bredd, vilket gör att den är lika stor
+              som boxen och det är bara margin som kan vara utanför boxen. Det
+              negativa blir att innehållet krymper enligt (Montathar faraon &
+              Lars Holmberg, 2022)
+            </p>
+            <h3>Enheter</h3>
+            <p>
+              Jag har försökt att hålla mig till relativa enheter på sidan, då
+              det är relaterat till sin förälder objektet och rem är relativ
+              till rotelementet. Enligt (WUH100 2023 15 Enheter på webben, 2023)
+              så kan sidan anpassas efter användarens inställningar på webben.
+            </p>
+          </section>
+          <section>
+            <h2>Layout</h2>
+            <h3>Navigation</h3>
+            <p>
+              Jag valde att lägga min navigation i min Header liggande på höger
+              sida om skärmen är över 575 px, om skärmen är under 575 px så är
+              den stående på höger sida. <br />
+              Footer har en navigation i sig med en stående punktlista.
+              Vanligtvis så hittar man en navigation placerad uppe till höger om
+              loggan. De flesta personer förväntas att ha en navigation uppe i
+              högra hörnet av webbsidan, vilket gör det till den ideala platsen
+              enligt (Corrigan, SC. 2023).
+            </p>
+            <h3>Sidfot</h3>
+            <p>
+              I sidfoten hittar du policy. Det vill säga att användarna
+              informeras om att webbplatsens integrerings policy är en stark
+              rekommendation för alla företag. Likadant med navigationsmeny, så
+              användaren lätt kan ta sig vidare när man läst sidans innehåll.
+              Kontakter och sociala medier ger användarna möjlighet att kontakta
+              och kolla upp sidans aktiviteter, vilket är mer valfria att ha med
+              i sidfoten enligt (Intuit Mailchimp. 2001-2023)
+            </p>
+            <h3>Css grids</h3>
+            <p>
+              Hemsidan använder primärt två stycken grids: wrappern och footer.
+              Sen har vi en sekundär som blir grid vid lägsta brytpunkten: ul
+              listan i navigationen i header. Jag använder wrappern för att
+              bestämma vart alla dess barn ska vara grid-template-rows “header,
+              hero img, aside, main och sist footer". <br />
+              Medans footer har två lägen standard och sen vid första
+              brytpunkten. standard läget har grid-template-columns "policy,
+              navigation, kontakter till sist sociala medier. Dock ändras till 3
+              colums och 2 rows där policyn tar hela första raden och på andra
+              raden kontakter, navigation och sen sociala medier. Jag använder
+              grids för att se till att innehållet hamnar där de ska vara.
+            </p>
+            <h3>Flexbox</h3>
+            <p>
+              Jag har använt flexbox flex-wrap: wrap; till mina produkter då det
+              är många rutor, dels för att underlätta kodningen och att inte
+              behöva onödiga brytpunkter. Enligt (Montathar faraon & Lars
+              Holmberg, 2022) blir fördelarna med att göra så här att utrymmen
+              blir lika mellan olika element men även tillämpar samma höjd
+              beroende på innehåll samt posering.
+            </p>
+          </section>
+          <section>
+            <h2>Läsbarhet</h2>
+            <p>
+              Jag har valt bakgrundsfärger och text färger som gör det enklare
+              att läsa texten. t.ex. har jag en WCAG 10,63 AAA som sämst som är
+              sidans länkar och navigationer. medans den har 12,44 AAA på
+              produkt texterna medans alltmer viktig text är 19,56 AAA. sen har
+              jag en inne height: 1.5 som ökar radavståndet som gör att det blir
+              lättare att läsa texten, vilket är en rekommendation av (Montathar
+              faraon & Lars Holmberg, 2022).
+            </p>
+          </section>
+          <section>
+            <h2>Brytpunkter</h2>
+            <p>
+              Sidan har 3 brytpunkter. <br />
+              Första är vid är 900px som ändrar foten så den inte kraschar ihop
+              med sitt innehåll och förbättrar läs innehållet så det inte blir
+              för ihoptryckt. <br />
+              Andra är vid 700px som ändrar om, så de hamnar under varandra så
+              att inte texten blir ihoptryckt för mycket. Medan foten ändrar
+              form till display: table-column så innehållet får plats. <br />
+              Sista brytpunkten är vid 575 px. Då ändras headers navigation från
+              liggande till stående för att inte krascha med loggan. Medan
+              produkterna får en bredd på 100% och dess text centreras. sidan
+              kommer ner till 250 px på startsidan och 375px på analys innan den
+              får scrollmeny vertikalt och klarar att visas på många av dagens
+              mobiler och surfplattor.
+            </p>
+          </section>
+          <section>
+            <h2>Bildoptemering</h2>
+            <p>
+              Alla ikoner har låg upplösning och är png-filer och alla andra
+              bilder är jpg-filer. Produktbilderna är runt 200 x 200 pixlar
+              medan bakgrundsbilderna är större och tar därför mer data.
+            </p>
+          </section>
+          <section>
+            <h2>utskrift</h2>
+            <p>
+              Vid utskrift så tas Header, reklam samt footers navigation,
+              sociala medier samt produkt border försvinner bort. All text blir
+              serif svart samt teckenstorleken blir 11 och line-height blir
+              1,15. Titlar blir open sans och blir svart.
+            </p>
+          </section>
+          <section>
+            <h2>Buggar</h2>
+            <p>
+              Inga errors eller varningar i validator för HTML och inga fel
+              hittades vid css validator. <br />
+              Prenumerationsfältet har inte direkt någon funktion då det är mer
+              en princip vad den kan göra. <br />
+              Produkterna har ingen funktion som är tänkt. Tanken är att man ska
+              komma till produktens sida för att köpa den. Förutom det är alla
+              andra länkar kopplade till en adress. <br />
+              Bilderna kan bli pixliga då alla har enheten rem om användaren
+              skulle öka rotelementet.
+            </p>
+          </section>
+          <section>
+            <h2>Kompatibilitet</h2>
+            <p>
+              woff och woff 2 fonten kan nästan alla webbläsare idag använda
+              utom en som är Opera Mini som inte klarar av mycket. Jag har
+              därför inte lagt någon energi på att fixa det.
+            </p>
+          </section>
+          <section>
+            <h2>Summering</h2>
+            <p>
+              Att se hur webbsidan utvecklas steg för steg efter att lagt till
+              eller ändrat kod var ett givande uppdrag. Allra mest tid
+              spenderade jag i css-filen för att arbeta med den estetiska delen
+              av sidan. Det jag hade svårt att förstå mig på var hur flex och
+              dess kommandon hängde ihop. Grid hade nog varit lättare att koda
+              men det skulle slutat i mer kod och mer brytpunkter samt tid att
+              koda, vilket jag ville undvika. Att lära sig skillnaden mellan
+              padding och margin gjorde att man fick ändra sig mycket, då jag
+              bestämde många element i min style-css. Det kanske hade varit
+              bättre att göra en hel css-reset än att använda Normalize.css? Jag
+              är nöjd med uppgiften och mitt arbete. Jag skulle kunnat lagt till
+              fler funktioner men jag gillar att sidan är simpel och får fram
+              sitt syfte.
+            </p>
+          </section>
+
+          <section>
+            <h2>Referenslista</h2>
+            <ul class="referens_lista">
+              <li>
+                (Montathar Faraon & Lars Holmberg, 2022)
+                <div class="citat">Introduktion till HTML och CSS</div>
+                . Studentlitteratur AB, Lund.
+              </li>
+              <li>
+                DeBolt, VD, (2014). Web teacher.
+                <div class="citat">Why have a wrapper div?</div>
+                , [Blogg] June 26, 2014. Tillgänglig:
+                <a
+                  href="https://www.webteacher.ws/2014/06/26/wrapper-div/"
+                  target="_blank"
+                  >https://www.webteacher.ws/2014/06/26/wrapper-div/</a
+                >
+                [2023-10-22].
+              </li>
+              <li>
+                Coyier, CC, (2013). Accessibility.
+                <div class="citat">Navigation in Lists</div>
+                To Be or Not To Be, [Blogg] January 29, 2013. Tillgänglig:
+                <a
+                  href="https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/"
+                  target="_blank"
+                  >https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/</a
+                >[2023-10-22]
+              </li>
+              <li>
+                Dofactory, (u.å)
+                <div class="citat">HTML UTF-8</div>
+                . Austin, Texas: Data & Object Factory, LLC. Tillgänglig:
+                <a
+                  href="https://www.dofactory.com/html/charset/utf8"
+                  target="_blank"
+                  >https://www.dofactory.com/html/charset/utf8</a
+                >
+                [2023-10-22].
+              </li>
+              <li>
+                Shechter, ES,( 2019). Normalize CSS or CSS Reset?! .
+                <div class="citat">CSS Architecture — Part 1,</div>
+                [Blogg] May 19, 2019. Tillgänglig:
+                <a
+                  href="https://elad.medium.com/normalize-css-or-css-reset-9d75175c5d1e"
+                  target="_blank"
+                  >https://elad.medium.com/normalize-css-or-css-reset-9d75175c5d1e</a
+                >
+                [2023-10-22].
+              </li>
+              <li>
+                WUH100 2023 15
+                <div class="citat">Enheter på webben (2023)</div>
+                .[Video online].
+                <a
+                  href="https://www.youtube.com/watch?v=bjlNiMuqDhM&t=967s&ab_channel=HVChristianOhlsson"
+                  target="_blank"
+                  >https://www.youtube.com/watch?v=bjlNiMuqDhM&t=967s&ab_channel=HVChristianOhlsson</a
+                >[2023-10-22].
+              </li>
+              <li>
+                Corrigan, SC. (2023). 7 Website Navigation Best Practices With
+                Examples.
+                <div class="citat">4 types of website navigation,</div>
+                [Blogg] (u.å.) Tillgänglig:
+                <a
+                  href="https://www.flux-academy.com/blog/7-website-navigation-best-practices-with-examples"
+                  target="_blank"
+                  >https://www.flux-academy.com/blog/7-website-navigation-best-practices-with-examples</a
+                >[2023-10-22].
+              </li>
+              <li>
+                Intuit Mailchimp. (2001-2023). Web Design 101:
+                <div class="citat">A Guide to Website Footers</div>
+                [Elektronisk] Tillgänglig:
+                <a
+                  href="https://mailchimp.com/resources/website-footer/ "
+                  target="_blank"
+                  >https://mailchimp.com/resources/website-footer/ </a
+                >[2023-10-22].
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <!--###########################  footer  #####################################
+
+      samma kommentar i Index filen.
+
+      ###########################################################################-->
+
+      <footer class="main_footer">
+        <!--########################  Policy  ###################################-->
+
+        <section class="foot_bajs">
+          <h2>policy</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
+            vitae ullam maxime numquam maiores dicta cumque dolore iusto,
+            obcaecati nobis facilis aliquid harum, suscipit dolor similique
+            quia, hic eum mollitia? Lorem ipsum dolor sit amet consectetur
+          </p>
+          <p class="citat">I rymden kan ingen höra dig skrika!</p>
+        </section>
+
+        <!--#####################  footer nav  ##################################-->
+
+        <section class="foot_nav">
+          <h2>Navigation</h2>
+          <nav>
+            <ul>
+              <li><a href="index.html">start sida</a></li>
+              <li><a href="analys.html">Analys sida</a></li>
+              <li><a href="#footer">kontakter</a></li>
+              <li><a href="index.html#information">information</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <!--###################  kontakter  #####################################-->
+
+        <section class="foot_kontakter" id="footer">
+          <h2>kontakter</h2>
+          <ul>
+            <li>Mikael Hoffsteny</li>
+            <li>köpmansgatan 5</li>
+            <li>59838 Vimmerby</li>
+            <li>0492-40344</li>
+            <li>bighoffa@live.se</li>
+          </ul>
+        </section>
+        <!--###################  socialamedier  ################################-->
+
+        <section class="foot_social">
+          <h2>socialamedier</h2>
+
+          <nav class="foot_social_nav">
+            <a
+              href="https://www.youtube.com/channel/UCfwp17ouENYR7czk4fYHs6A"
+              target="_blank"
+              ><img
+                src="images/youtube-icon-tb.png"
+                alt="youtube ikonen är en kvadratisk röd kub med en vit trijangel i mitten"
+            /></a>
+
+            <a href="https://www.facebook.com/mikael.hoffsten" target="_blank"
+              ><img
+                src="images/facebook-icon-tb.png"
+                alt="facebook ikon som är en blå rund cirkel runt en ett blåt F i mitten"
+            /></a>
+
+            <a href="https://www.instagram.com/bighoffa89/" target="_blank"
+              ><img
+                src="images/insta-icon-tb.png"
+                alt="instagram ikonen är en kvadratisk kamra som är rängbågs färgad "
+            /></a>
+          </nav>
+        </section>
+
+        <!--#########################  nästan klar  #####################################-->
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!--#########################################################################################-->
+<!--#########################  Du klara dig igenom allt #####################################-->
+<!--#########################  Du får en guld sjärna ########################################-->
+<!--#########################################################################################-->
+<!--#########################  Nästa sida nu!  ##############################################-->
+<!--#########################################################################################-->

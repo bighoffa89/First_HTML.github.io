@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+  <!-- valt svenska så funktioner vet vilket språk som ska läsas-->
+
+  <!--############################### Head #################################
+
+  Här i huvuddelen har vi vår titel på sidan uppe i fliken.
+  beskrivning vad hemsidan handlar om och vem som är författaren, vilket gör
+  att sidan kommer upp när man söker på dessa.
+  charset utf-8 är det mest vanligaste språk som används idag och kan hantera
+  omkring 1,112,064 olika karaktärstecken.
+  länken till vår css-fil så all style kommer in på hemsidan.
+ 
+ ##########################################################################-->
+
+  <head>
+    <title>bighoffas Creations</title>
+    <meta name="author" content="Mikael Hoffsten" />
+    <meta name="description" content="”exinamation html och css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--wrappern om sluter allt i body som en container. -->
+
+      <!--############################### Header #################################
+
+      jag har gjort min header simpel en bild (img) och en navigation, jag använde
+      en ul/li lista för mina länkar (a) som leder till sin egen plats.            
+                 
+      Jag skulle kunnat att använda mig av bara en (NAV) med (a) i sig! men jag
+      känner mig mer behagligare med listan, då det ger ett litet inbuktning i koden
+      man kan följa.
+     
+        <nav>
+          <ul>
+            <li><a..
+            <li><a..
+            <li><a..
+            <li><a..
+          </ul>
+        </nav>
+
+      classer   : "main_header" "loggotyp"
+
+      ##########################################################################-->
+
+      <header class="main_header">
+        <img
+          class="loggotyp"
+          src="images/site-logga-Head.png"
+          alt="en 3d anemerad kvinna med poligon "
+        />
+
+        <nav>
+          <ul>
+            <li><a href="index.html">start sida</a></li>
+            <li><a href="analys.html">Analys sida</a></li>
+            <li><a href="#footer">kontakter</a></li>
+            <li><a href="index.html#information">information</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!--########################### Hero img #####################################
+     
+      Här har vi sidans titel namn.
+      Jag har valt lägga min hero img och en (h1) i en (div) tag då det va det mest
+      Det är lämpligt tagen för sidan enligt mitt tycke.
+
+      classer   : "hero_img"
+
+      ###########################################################################-->
+
+      <div class="hero_img"><h1>SE: BIG HOFFAs Creations</h1></div>
+
+      <!--###########################  Aside  ######################################
+     
+      Den här aside innehåller två sektioner som där man kan köpa själva spelet
+      till den här sidans produkter, den ena är för vanliga spelet och den andra är
+      för Ultimate Edition
+      och sektionerna innehåller titel, bild logga, information om spelet och en länk
+      till deras webbplats där man kan köpa spelet.
+      Då innehållet är relevant till sidan är det lägligt att ha den i en (aside)
+
+      classer  : "main_aside" "aside_section_spaceengerners" "aside_h2" "aside_img"
+      .          "aside_p" "aside_a"
+
+      ###########################################################################-->
+
+      <aside class="main_aside">
+        <section class="aside_section_spaceengerners">
+          <h2 class="aside_h2">Space Engineers</h2>
+          <img
+            class="aside_img"
+            src="images/SE_logga.png"
+            alt="en astronaut i grått som viknkar"
+          />
+          <p class="aside_p">
+            Space Engineers is a sandbox game about engineering, construction,
+            exploration and survival in space and on planets. You can build
+            space ships, space stations, planetary outposts of various sizes and
+            uses, pilot ships and travel through space to explore planets.
+          </p>
+          <a
+            class="aside_a"
+            href="https://www.spaceengineersgame.com/store/?gclid=CjwKCAjwvrOpBhBdEiwAR58-3PwTzWJrnaR0Dw15VosyNFqt869VvbteN7DL6i_XgyoSQgohALizWhoCPSsQAvD_BwE"
+            target="_blank"
+            >KÖP HÄR</a
+          >
+        </section>
+        <section class="aside_section_spaceengerners">
+          <h2 class="aside_h2">Space Engineers Ultimate Edition</h2>
+          <img
+            class="aside_img"
+            src="images/SE_logga.png"
+            alt="en astronaut i grått som viknkar"
+          />
+          <p class="aside_p">
+            Space Engineers Ultimate Edition includes the base game and all DLCs
+            for Space Engineers. Enjoy the definitive version of Space Engineers
+            as you build and explore across the stars!ts.
+          </p>
+          <a
+            class="aside_a"
+            href="https://www.spaceengineersgame.com/store/?gclid=CjwKCAjwvrOpBhBdEiwAR58-3PwTzWJrnaR0Dw15VosyNFqt869VvbteN7DL6i_XgyoSQgohALizWhoCPSsQAvD_BwE"
+            target="_blank"
+            >KÖP HÄR</a
+          >
+        </section>
+      </aside>
+
+      <!--###########################  MAiN Main #######################################
+
+      Min main består av en artikel som innehåller två delar! [main_drudukt] som
+      är sidans själva huvud innehåll och den består av flera sections med olika
+      produkter som erbjuds, titel, bild, text och pris har dom.
+      Sen har vi den andra delen [information] som ligger in en sektion med två titlar
+      och text och har en id till navigationen så man kan ta sig till dit genom
+      länken samt en Prenumerera på sidan funktion med en knapp.
+
+      Classer : "main_main" "main_produkt" "main_information_section" "Prenumerera_fält"
+      .         "Prenumerera_knapp"
+
+      id      : "information"
+
+      ###########################################################################-->
+
+      <main class="main_main">
+        <article>
+          <!--###################  main produkt  ################################-->
+          <h2>BluePrints</h2>
+          <div class="produkt_contaner">
+            <section class="main_produkt">
+              <h3>HIRO carrier</h3>
+              <img
+                src="images/SE-creations-HIRO.jpg"
+                alt="rymdskepp i färgen gul och röd med ditaljer av grå och svart, den har tre dockings för mining dorons i frånten."
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 175:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>NORA</h3>
+              <img
+                src="images/SE-creations-NORA.jpg"
+                alt="ett rymdskepp i färgen gul och en röd tuppkam på topen av skeppet. på sidorna sitter det varsin förlängd arm med welders."
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 100:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>Ram rover</h3>
+              <img
+                src="images/SE-creations-RAM.jpg"
+                alt="RAM är i gult och har en röd tuppkam på ryggen, den har 8 hjul att ta sig fram på, och har ditaljer i svart och grå."
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>EMIL miner</h3>
+              <img
+                src="images/SE-creations-EMIL.jpg"
+                alt="rymdskeppet är gul med röd tuppkam och har 4st borrar i frånten"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>FALKON</h3>
+              <img
+                src="images/SE-creations-falkon.jpg"
+                alt="skeppet är vitt med svarta och gula ditaljer på vingarna"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>MATO</h3>
+              <img
+                src="images/SE-creations-MATO.jpg"
+                alt="ett stort rymdskepp i färgen vit och grå, med stora kanoner på sidan av skeppet, "
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>PHM MINER</h3>
+              <img src="images/SE-creations-PHM.jpg" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>bild</h3>
+              <img
+                src="images/SE-kim.jpg"
+                alt="rymdskeppet är gul med röd tuppkam och har en kanon på höger och vänster sida"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>bild</h3>
+              <img
+                src="images/SE-kim.jpg"
+                alt="rymdskeppet är gul med röd tuppkam och har en kanon på höger och vänster sida"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+            <section class="main_produkt">
+              <h3>bild</h3>
+              <img
+                src="images/SE-kim.jpg"
+                alt="rymdskeppet är gul med röd tuppkam och har en kanon på höger och vänster sida"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              </p>
+              <h4>pris: 125:- kr</h4>
+            </section>
+          </div>
+        </article>
+
+        <!--###################  main_information_section  #####################-->
+
+        <section class="main_information_section" id="information">
+          <h2>information</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            optio ex deleniti animi, molestias nemo ipsum aspernatur similique
+            incidunt officia facere nobis perspiciatis id voluptatem nisi quis.
+            Officiis, eligendi ab. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Nam, nihil sunt inventore ullam placeat doloribus
+            delectus. Minima nostrum architecto vero quo dolores optio! A
+            asperiores pariatur exercitationem, praesentium enim dicta?
+          </p>
+
+          <h3>Prenumerera</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maximes
+          </p>
+          <form action="#">
+            <input
+              class="Prenumerera_fält"
+              type="text"
+              placeholder="Skriv din e-mail här"
+            />
+            <button class="Prenumerera_knapp" type="submit">Prenumerera</button>
+          </form>
+        </section>
+      </main>
+
+      <!--###########################  footer  #####################################
+
+      Foten är sidans slut som där vi har olika sektioner och en navigation.
+      och länkar.
+      Footern består av policy som har titel, text och citat,
+      navigationen ser ut som uppe i header med (ul),(li) lista med länkar (a) men
+      den har en rubrik,
+      sen har vi kontaktinformation som även är i en (ul),(li) lista och har en id
+      så man kan använda sig av sidans navigation för att hitta dit.
+      Till sist har vi sociala medier som är en (nav) med (a) samt bild i länken.
+      så när man trycker på bild-ikonen så kommer man till dess hemsida i en ny flik.
+
+
+      classer  : "main_footer" "foot_bajs" "citat" "foot_nav" "foot_kontakter"
+      .          "foot_social" "foot_social_nav"
+
+      id       : "footer"
+
+      ###########################################################################-->
+
+      <footer class="main_footer">
+        <!--########################  Policy  ###################################-->
+
+        <section class="foot_bajs">
+          <h2>policy</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
+            vitae ullam maxime numquam maiores dicta cumque dolore iusto,
+            obcaecati nobis facilis aliquid harum, suscipit dolor similique
+            quia, hic eum mollitia? Lorem ipsum dolor sit amet consectetur
+          </p>
+          <p class="citat">I rymden kan ingen höra dig skrika!</p>
+        </section>
+
+        <!--#####################  footer nav  ##################################-->
+
+        <section class="foot_nav">
+          <h2>Navigation</h2>
+          <nav>
+            <ul>
+              <li><a href="index.html">start sida</a></li>
+              <li><a href="analys.html">Analys sida</a></li>
+              <li><a href="#footer">kontakter</a></li>
+              <li><a href="index.html#information">information</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <!--###################  kontakter  #####################################-->
+
+        <section class="foot_kontakter" id="footer">
+          <h2>kontakter</h2>
+          <ul>
+            <li>Mikael Hoffsteny</li>
+            <li>köpmansgatan 5</li>
+            <li>59838 Vimmerby</li>
+            <li>0492-40344</li>
+            <li>bighoffa@live.se</li>
+          </ul>
+        </section>
+        <!--###################  socialamedier  ################################-->
+
+        <section class="foot_social">
+          <h2>socialamedier</h2>
+
+          <nav class="foot_social_nav">
+            <a
+              href="https://www.youtube.com/channel/UCfwp17ouENYR7czk4fYHs6A"
+              target="_blank"
+              ><img
+                src="images/youtube-icon-tb.png"
+                alt="youtube ikonen är en kvadratisk röd kub med en vit trijangel i mitten"
+            /></a>
+
+            <a href="https://www.facebook.com/mikael.hoffsten" target="_blank"
+              ><img
+                src="images/facebook-icon-tb.png"
+                alt="facebook ikon som är en blå rund cirkel runt en ett blåt F i mitten"
+            /></a>
+
+            <a href="https://www.instagram.com/bighoffa89/" target="_blank"
+              ><img
+                src="images/insta-icon-tb.png"
+                alt="instagram ikonen är en kvadratisk kamra som är rängbågs färgad "
+            /></a>
+          </nav>
+        </section>
+
+        <!--#########################  nästan klar  #####################################-->
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!--#########################################################################################-->
+<!--#########################  Du klara dig igenom allt #####################################-->
+<!--#########################  Du får en guld sjärna ########################################-->
+<!--#########################################################################################-->
+<!--#########################  Nästa sida nu!  ##############################################-->
+<!--#########################################################################################-->
